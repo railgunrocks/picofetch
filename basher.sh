@@ -90,7 +90,4 @@ case $OS in
     ;;
 esac
 #=======
-pacman -Qq --color never > packnum.txt
-dpkg-query -l | less > packnum.txt
-wc -l packnum.txt
 echo -e "$BWhite------------------------------"
