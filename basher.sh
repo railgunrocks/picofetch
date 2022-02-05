@@ -69,11 +69,11 @@ case $OS in
         echo "${ARCH_PKG} (pacman)"
     ;;
     debian)
-        DEB_PKG=$(dpkg-query -f '${binary:Package}\n' -W | wc -l)
+        DEB_PKG=$(dpkg --get-selections | wc --lines)
         echo "${DEB_PKG} (dpkg)"
     ;;
     ubuntu)
-        DEB_PKG=$(dpkg-query -f '${binary:Package}\n' -W | wc -l)
+        DEB_PKG=$(dpkg --get-selections | wc --lines)
         echo "${DEB_PKG} (dpkg)"
     ;;
     Arch)
@@ -81,11 +81,11 @@ case $OS in
         echo "${ARCH_PKG} (pacman)"
     ;;
     Debian)
-        DEB_PKG=$(dpkg-query -f '${binary:Package}\n' -W | wc -l)
+        DEB_PKG=$(dpkg --get-selections | wc --lines)
         echo "${DEB_PKG} (dpkg)"
     ;;
     Ubuntu)
-        DEB_PKG=$(dpkg-query -f '${binary:Package}\n' -W | wc -l)
+        DEB_PKG=$(dpkg --get-selections | wc --lines)
         echo "${DEB_PKG} (dpkg)"
     ;;
 esac
